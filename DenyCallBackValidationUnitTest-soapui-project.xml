@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a2c06b24-8c60-41a3-80d1-b4e0fcdfb78b" activeEnvironment="Default" name="DenyCallBackValidationUnitTest" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="3633bed1-9a8d-47de-86aa-237b36eda147" wsaVersion="NONE" name="ValidateFIDenyCallback_ValidateFICallbackHttpBinding" type="wsdl" bindingName="{http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback}ValidateFIDenyCallback_ValidateFICallbackHttpBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback/WEB-INF/wsdl/ProcessLib/Common/BEA_Solution_Deny_Module_ValidateFIDenyCallback.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback/WEB-INF/wsdl/ProcessLib/Common/BEA_Solution_Deny_Module_ValidateFIDenyCallback.wsdl"><con:part><con:url>http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback/WEB-INF/wsdl/ProcessLib/Common/BEA_Solution_Deny_Module_ValidateFIDenyCallback.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ValidateFIDenyCallback_ValidateFICallbackHttp_Service" targetNamespace="http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:this="http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback" location="ValidateFICallback.wsdl"></wsdl:import>
+  <wsdl:binding name="ValidateFIDenyCallback_ValidateFICallbackHttpBinding" type="this:ValidateFICallback">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="validateFICallback">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="validateFICallbackRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateFICallbackResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ValidateFIDenyCallback_ValidateFICallbackHttpService">
+    <wsdl:port name="ValidateFIDenyCallback_ValidateFICallbackHttpPort" binding="this:ValidateFIDenyCallback_ValidateFICallbackHttpBinding">
+      <soap:address location="http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback/WEB-INF/wsdl/ProcessLib/Common/ValidateFICallback.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ValidateFICallback" targetNamespace="http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://BEA-Solution_Library/ProcessLib/Common" xmlns:tns="http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback">
+      <xsd:import namespace="http://BEA-Solution_Library/ProcessLib/Common" schemaLocation="ValidateFICallbackRs.xsd"/>
+      <xsd:import namespace="http://BEA-Solution_Library/ProcessLib/Common" schemaLocation="ValidateFICallbackRq.xsd"/>
+      <xsd:element name="validateFICallback">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="validateFICallbackRq" nillable="true" type="bons1:ValidateFICallbackRq"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="validateFICallbackResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="validateFICallbackRs" nillable="true" type="bons1:ValidateFICallbackRs"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="validateFICallbackRequestMsg">
+    <wsdl:part name="validateFICallbackParameters" element="tns:validateFICallback"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateFICallbackResponseMsg">
+    <wsdl:part name="validateFICallbackResult" element="tns:validateFICallbackResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ValidateFICallback">
+    <wsdl:operation name="validateFICallback">
+      <wsdl:input name="validateFICallbackRequest" message="tns:validateFICallbackRequestMsg"></wsdl:input>
+      <wsdl:output name="validateFICallbackResponse" message="tns:validateFICallbackResponseMsg"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback/WEB-INF/wsdl/ProcessLib/Common/ValidateFICallbackRs.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://BEA-Solution_Library/ProcessLib/Common" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.sama.bea.sa/common/BaseLib">
+  <xsd:import schemaLocation="../../common/BaseLib.xsd" namespace="http://www.sama.bea.sa/common/BaseLib"></xsd:import>
+  <xsd:complexType name="ValidateFICallbackRs">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="status_code" type="bons0:T_StatusCode"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback/WEB-INF/wsdl/common/BaseLib.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://www.sama.bea.sa/common/BaseLib" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:base="http://www.sama.bea.sa/common/BaseLib">
+  <complexType name="T_MsgList">
+    <sequence>
+      <element name="Code" type="base:T_StatusCode" minOccurs="1" maxOccurs="unbounded"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Rqstr">
+    <sequence>
+      <element name="PID" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <length value="5"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="RID" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="base:T_NSPC">
+            <minLength value="2"/>
+            <maxLength value="20"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Name" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="base:T_AnyName">
+            <minLength value="1"/>
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Pstn" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="base:T_NSPC">
+            <minLength value="1"/>
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="RRN" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="base:T_NSPC">
+            <minLength value="2"/>
+            <maxLength value="30"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="GeoLoc" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <length value="18"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="GeoLocDsc" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="base:T_NSPC">
+            <minLength value="1"/>
+            <maxLength value="200"/>
+          </restriction>
+        </simpleType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="T_InvPrty">
+    <choice>
+      <element name="Indv" type="base:T_Individual" minOccurs="1" maxOccurs="1"></element>
+      <element name="Corp" type="base:T_Corporate" minOccurs="1" maxOccurs="1"></element>
+      <element name="Gov" type="base:T_Government" minOccurs="1" maxOccurs="1"></element>
+      <element name="Chrty" type="base:T_Charity" minOccurs="1" maxOccurs="1"></element>
+      <element name="Chmbr" type="base:T_Chamber" minOccurs="1" maxOccurs="1"></element>
+    </choice>
+  </complexType>
+  <complexType name="T_RpInvPrty">
+    <choice>
+      <element name="Indv" type="base:T_RpIndv" minOccurs="1" maxOccurs="1"></element>
+      <element name="Corp" type="base:T_RpCorp" minOccurs="1" maxOccurs="1"></element>
+      <element name="Gov" type="base:T_RpGov" minOccurs="1" maxOccurs="1"></element>
+      <element name="Chrty" type="base:T_RpChrty" minOccurs="1" maxOccurs="1"></element>
+      <element name="Chmbr" type="base:T_RpChmbr" minOccurs="1" maxOccurs="1"></element>
+    </choice>
+  </complexType>
+  <complexType name="T_RpIndv">
+    <sequence>
+      <element name="RpId" type="base:T_RpIndvId" minOccurs="1" maxOccurs="1"></element>
+      <element name="frstName" type="base:T_Name" minOccurs="1" maxOccurs="1"></element>
+      <element name="scndName" type="base:T_Name" minOccurs="0" maxOccurs="1"></element>
+      <element name="thrdName" type="base:T_Name" minOccurs="0" maxOccurs="1"></element>
+      <element name="lstName" type="base:T_Name" minOccurs="0" maxOccurs="1"></element>
+      <element name="Ntnlty" type="base:T_NtnltyType" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_RpIndvId">
+    <choice>
+      <element name="ID_NID" type="base:T_ID_NID" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_KWT" type="base:T_ID_KWT" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_ARE" type="base:T_ID_ARE" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_QAT" type="base:T_ID_QAT" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_BHR" type="base:T_ID_BHR" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_OMN" type="base:T_ID_OMN" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_RID" type="base:T_ID_RID" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_SP" type="base:T_ID_SP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_DP" type="base:T_ID_DP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_GCCP" type="base:T_ID_SP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_PP" type="base:T_ID_SP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_FP" type="base:T_ID_SP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_HN" type="base:T_ID_DP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_FC" type="base:T_ID_DP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_VID" type="base:T_ID_VID" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_DC" type="base:T_ID_SP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_ERV" type="base:T_ID_ERV" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_FEV" type="base:T_ID_ERV" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_TWV" type="base:T_ID_DP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_EV" type="base:T_ID_ERV" minOccurs="1" maxOccurs="1"></element>
+    </choice>
+  </complexType>
+  <complexType name="T_RpCorp">
+    <sequence>
+      <element name="RpId" type="base:T_RpCorpId" minOccurs="1" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_RpCorpId">
+    <choice>
+      <element name="ID_CRN" type="base:T_ID_VID" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_WPL" type="base:T_ID_DP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_EC" type="base:T_ID_DP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_LOL" type="base:T_ID_LOL" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_ML" type="base:T_ID_LOL" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_PL" type="base:T_ID_LOL" minOccurs="1" maxOccurs="1"></element>
+    </choice>
+  </complexType>
+  <complexType name="T_RpGov">
+    <sequence>
+      <element name="RpId" type="base:T_RpGovId" minOccurs="0" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_RpGovId">
+    <sequence>
+      <element name="ID_GID" type="base:T_ID_LOL" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_RpChrty">
+    <sequence>
+      <element name="RpId" type="base:T_RpChrtyId" minOccurs="1" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_RpChrtyId">
+    <choice>
+      <element name="ID_WPL" type="base:T_ID_DP" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_ML" type="base:T_ID_LOL" minOccurs="1" maxOccurs="1"></element>
+      <element name="ID_PL" type="base:T_ID_LOL" minOccurs="1" maxOccurs="1"></element>
+    </choice>
+  </complexType>
+  <complexType name="T_RpChmbr">
+    <sequence>
+      <element name="RpId" type="base:T_RpChmbrId" minOccurs="1" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_RpChmbrId">
+    <sequence>
+      <element name="ID_COCL" type="base:T_ID_DP" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_CustInfo">
+    <sequence>
+      <element name="CustName" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="base:T_AnyName">
+            <minLength value="2"/>
+            <maxLength value="100"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Id" type="base:T_Id" minOccurs="1" maxOccurs="1"/>
+      <element name="IdType" type="base:T_IdTypeIndividual" minOccurs="1" maxOccurs="1"></element>
+      <element name="Ntnlty" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <length value="3"/>
+          </restriction>
+        </simpleType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Individual">
+    <sequence>
+      <element name="Id" type="base:T_Id" minOccurs="1" maxOccurs="1"></element>
+      <element name="IdType" type="base:T_IdTypeIndividual" minOccurs="1" maxOccurs="1"></element>
+      <element name="frstName" type="base:T_Name" minOccurs="1" maxOccurs="1"></element>
+      <element name="scndName" type="base:T_Name" minOccurs="0" maxOccurs="1"></element>
+      <element name="thrdName" type="base:T_Name" minOccurs="0" maxOccurs="1"></element>
+      <element name="lstName" type="base:T_Name" minOccurs="0" maxOccurs="1"></element>
+      <element name="Ntnlty" type="base:T_NtnltyType" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Corporate">
+    <sequence>
+      <element name="Id" type="base:T_Id" minOccurs="1" maxOccurs="1"></element>
+      <element name="IdType" type="base:T_IdTypeCorporate" minOccurs="1" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Government">
+    <sequence>
+      <element name="Id" type="base:T_Id" minOccurs="0" maxOccurs="1"></element>
+      <element name="IdType" type="base:T_IdTypeGovernment" minOccurs="0" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Charity">
+    <sequence>
+      <element name="Id" type="base:T_Id" minOccurs="1" maxOccurs="1"></element>
+      <element name="IdType" type="base:T_IdTypeCharity" minOccurs="1" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Chamber">
+    <sequence>
+      <element name="Id" type="base:T_Id" minOccurs="1" maxOccurs="1"></element>
+      <element name="IdType" type="base:T_IdTypeChamber" minOccurs="1" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_ThrdPrty">
+    <sequence>
+      <element name="Id" type="base:T_Id" minOccurs="1" maxOccurs="1"></element>
+      <element name="IdType" type="base:T_IdTypeIndividual" minOccurs="1" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_FinInst">
+    <choice>
+      <element name="FIList" type="base:T_FIList" minOccurs="1" maxOccurs="1"></element>
+      <element name="FIGCode" type="base:T_FIGroupCode" minOccurs="1" maxOccurs="1"></element>
+    </choice>
+  </complexType>
+  <complexType name="T_FIList">
+    <sequence>
+      <element name="FICode" minOccurs="1" maxOccurs="unbounded">
+        <simpleType>
+          <restriction base="string">
+            <length value="5"/>
+          </restriction>
+        </simpleType>
+      </element>
+    </sequence>
+  </complexType>
+  <simpleType name="T_FIGroupCode">
+    <restriction base="string">
+      <length value="3"/>
+    </restriction>
+  </simpleType>
+  <complexType name="T_Pg">
+    <sequence>
+      <element name="PgSize" type="integer" minOccurs="1" maxOccurs="1"></element>
+      <element name="Strt" type="integer" minOccurs="0" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Pgn">
+    <sequence>
+      <element name="Itms" type="integer" minOccurs="1" maxOccurs="1"></element>
+      <element name="rtnItms" type="integer" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Attributes">
+    <sequence>
+      <element name="Attribute" type="base:T_Attribute" minOccurs="1" maxOccurs="unbounded"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_Attribute">
+    <sequence>
+      <element name="Name" type="base:T_AttrName" minOccurs="1" maxOccurs="1"></element>
+      <element name="Value" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <simpleType name="T_Name">
+    <restriction base="base:T_AnyName">
+      <minLength value="2"/>
+      <maxLength value="25"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_FICode">
+    <restriction base="string">
+      <length value="5"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_FullName">
+    <restriction base="base:T_AnyName">
+      <minLength value="2"/>
+      <maxLength value="100"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_Id">
+    <restriction base="base:T_NSPC_Text">
+      <minLength value="4"/>
+      <maxLength value="20"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_NtnltyType">
+    <restriction base="string">
+      <length value="3"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_IdTypeIndividual">
+    <restriction base="string">
+      <minLength value="2"/>
+      <maxLength value="10"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_IdTypeCorporate">
+    <restriction base="string">
+      <minLength value="2"/>
+      <maxLength value="10"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_IdTypeGovernment">
+    <restriction base="string">
+      <minLength value="2"/>
+      <maxLength value="10"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_IdTypeChamber">
+    <restriction base="string">
+      <minLength value="2"/>
+      <maxLength value="10"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_PrdctUserIdType">
+    <restriction base="string">
+      <minLength value="2"/>
+      <maxLength value="10"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_IdTypeCharity">
+    <restriction base="string">
+      <minLength value="2"/>
+      <maxLength value="10"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_IdTypeFixed">
+    <restriction base="string">
+      <length value="5"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_AccStatus">
+    <restriction base="string">
+      <enumeration value="01"/>
+      <enumeration value="02"/>
+      <enumeration value="03"/>
+      <enumeration value="04"/>
+      <enumeration value="05"/>
+      <enumeration value="06"/>
+      <enumeration value="07"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_DepotStatus">
+    <restriction base="base:T_NSPC">
+      <minLength value="1"/>
+      <maxLength value="20"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_AccountNumber">
+    <restriction base="base:T_NSPC_EN_Text">
+      <minLength value="4"/>
+      <maxLength value="24"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_IBAN">
+    <restriction base="string">
+      <length value="24"/>
+      <pattern value="SA[0-9]{22}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_AccCur">
+    <restriction base="string">
+      <pattern value="[A-Z]{3}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_Balance">
+    <restriction base="decimal">
+      <minExclusive value="-99999999999999999999"/>
+      <maxExclusive value="99999999999999999999"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_date">
+    <restriction base="string">
+      <minLength value="0"/>
+      <pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_Prcnt">
+    <restriction base="decimal">
+      <totalDigits value="9"/>
+      <fractionDigits value="6"/>
+      <minInclusive value="00.000001"/>
+      <maxInclusive value="100.00"/>
+    </restriction>
+  </simpleType>
+  <!--Header Common Types-->
+  <simpleType name="T_MsgDtTm">
+    <restriction base="string">
+      <length value="19"/>
+      <pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\.[0-9]{6})?((-|\+)[0-9]{2}:[0-9]{2})?)?)?"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_CRN">
+    <restriction base="string">
+      <minLength value="5"/>
+      <maxLength value="50"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_RRN">
+    <restriction base="string">
+      <minLength value="1"/>
+      <maxLength value="30"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_SRN">
+    <restriction base="string">
+      <minLength value="5"/>
+      <maxLength value="50"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ChID">
+    <restriction base="string">
+      <enumeration value="B2B"/>
+      <enumeration value="Portal"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_StatusCode">
+    <restriction base="string">
+      <length value="8"/>
+      <pattern value="[SE][0-9]{7}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_AttrName">
+    <restriction base="string">
+      <minLength value="1"/>
+      <maxLength value="30"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_IdTypeLong">
+    <restriction base="string">
+      <minLength value="5"/>
+      <maxLength value="30"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_InstRept">
+    <restriction base="string">
+      <enumeration value="01"/>
+      <enumeration value="02"/>
+      <enumeration value="03"/>
+      <enumeration value="04"/>
+      <enumeration value="05"/>
+    </restriction>
+  </simpleType>
+  <complexType name="T_RsrvInfo">
+    <sequence>
+      <element name="RsrvAmt" type="base:T_Balance" minOccurs="1" maxOccurs="1"></element>
+      <element name="Cur" type="base:T_AccCur" minOccurs="0" maxOccurs="1"></element>
+      <element name="RsrvBy" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+      <element name="RRN" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <minLength value="2"/>
+            <maxLength value="30"/>
+          </restriction>
+        </simpleType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="T_RsrvList">
+    <sequence>
+      <element name="RsrvInfo" type="base:T_RsrvInfo" minOccurs="1" maxOccurs="unbounded"></element>
+    </sequence>
+  </complexType>
+  <simpleType name="T_ID_NID">
+    <restriction base="string">
+      <length value="10"/>
+      <pattern value="[1][0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_KWT">
+    <restriction base="string">
+      <length value="12"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_ARE">
+    <restriction base="string">
+      <length value="15"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_QAT">
+    <restriction base="string">
+      <length value="11"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_BHR">
+    <restriction base="string">
+      <length value="9"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_OMN">
+    <restriction base="string">
+      <length value="8"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_RID">
+    <restriction base="string">
+      <length value="10"/>
+      <pattern value="[2][0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_SP">
+    <restriction base="string">
+      <minLength value="4"/>
+      <maxLength value="20"/>
+      <pattern value="[A-Za-z0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_DP">
+    <restriction base="string">
+      <minLength value="4"/>
+      <maxLength value="20"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_VID">
+    <restriction base="string">
+      <length value="10"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_ERV">
+    <restriction base="string">
+      <minLength value="4"/>
+      <maxLength value="12"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_ID_LOL">
+    <restriction base="string">
+      <minLength value="4"/>
+      <maxLength value="20"/>
+      <pattern value="[0-9ا-ي ]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_NSPC">
+    <!--<annotation>
+			<documentation>Non special Chars Except - <documentation>
+		<annotation>-->
+    <restriction base="string">
+      <pattern value="[^!@#$%?*/^\\(){}+=_|\[\];&lt;>&quot;'&amp;]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_NSPC_Text">
+    <!--<annotation>
+			<documentation>Non special Chars text<documentation>
+		<annotation>-->
+    <restriction base="string">
+      <pattern value="[A-Za-z0-9ا-ي ]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_NSPC_EN_Text">
+    <!--<annotation>
+			<documentation>Non special Chars text<documentation>
+		<annotation>-->
+    <restriction base="string">
+      <pattern value="[A-Za-z0-9 ]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_NSPC_AR_Text">
+    <!--<annotation>
+			<documentation>Non special Chars text<documentation>
+		<annotation>-->
+    <restriction base="string">
+      <pattern value="[0-9ا-ي ]+"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_AnyName">
+    <!--<annotation>
+			<documentation>Free text<documentation>
+		<annotation>-->
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="T_AnyType">
+    <!--<annotation>
+			<documentation>Free text<documentation>
+		<annotation>-->
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="T_BaseAmt">
+    <restriction base="decimal">
+      <minExclusive value="0"/>
+      <maxExclusive value="99999999999999999999"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_Num">
+    <restriction base="string">
+      <minLength value="1"/>
+      <maxLength value="30"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="T_Flag">
+    <restriction base="string">
+      <length value="1"/>
+      <pattern value="[YNyn]{1}"/>
+    </restriction>
+  </simpleType>
+  <complexType name="T_Amt">
+    <sequence>
+      <element name="Val" type="base:T_Balance" maxOccurs="1" minOccurs="1"></element>
+      <element name="Cur" type="base:T_AccCur" maxOccurs="1" minOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <simpleType name="T_BIC">
+    <restriction base="string">
+      <length value="5"/>
+      <pattern value="[0-9]+"/>
+    </restriction>
+  </simpleType>
+  <complexType name="T_Benf">
+    <sequence>
+      <element name="IBAN" type="base:T_IBAN" minOccurs="1" maxOccurs="1"></element>
+      <element name="BIC" type="base:T_BIC" minOccurs="1" maxOccurs="1"></element>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_AccId">
+    <sequence>
+      <element name="Num" type="base:T_AccountNumber" maxOccurs="1" minOccurs="1"></element>
+      <element name="IBAN" type="base:T_Flag" maxOccurs="1" minOccurs="1"></element>
+      <element name="BIC" type="base:T_BIC" maxOccurs="1" minOccurs="1"></element>
+    </sequence>
+  </complexType>
+  <complexType name="T_ShrsList">
+    <sequence>
+      <element name="ShrInfo" type="base:T_ShrInfo" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="T_ShrInfo">
+    <sequence>
+      <element name="CmpnyName" type="base:T_FullName" minOccurs="1" maxOccurs="1"></element>
+      <element name="ShrPrcnt" type="base:T_Prcnt" minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="T_PrdUsrsLis">
+    <sequence>
+      <element name="UsrInfo" type="base:T_UsrInfo" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="T_UsrInfo">
+    <sequence>
+      <element name="Id" type="base:T_Id" minOccurs="1" maxOccurs="1"/>
+      <element name="IdType" type="base:T_PrdctUserIdType" minOccurs="1" maxOccurs="1"/>
+      <element name="Name" type="base:T_FullName" minOccurs="1" maxOccurs="1"/>
+      <element name="UsrType" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="01"/>
+            <enumeration value="03"/>
+          </restriction>
+        </simpleType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="T_JntAcctsList">
+    <sequence>
+      <element name="JntAccInfo" type="base:T_JntAccInfo" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="T_JntAccInfo">
+    <sequence>
+      <element name="AccNum" type="base:T_AccountNumber" minOccurs="1" maxOccurs="1"></element>
+      <element name="IBAN" type="base:T_IBAN" minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback/WEB-INF/wsdl/ProcessLib/Common/ValidateFICallbackRq.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://BEA-Solution_Library/ProcessLib/Common" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.sama.bea.sa/common/Header">
+  <xsd:import schemaLocation="../../common/Header.xsd" namespace="http://www.sama.bea.sa/common/Header"></xsd:import>
+  <xsd:complexType name="ValidateFICallbackRq">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="rqHdr" type="bons0:T_RqHdr"></xsd:element>
+      <xsd:element minOccurs="0" name="FICallbackRq" type="xsd:anyType"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback/WEB-INF/wsdl/common/Header.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://www.sama.bea.sa/common/Header" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:base="http://www.sama.bea.sa/common/BaseLib" xmlns:header="http://www.sama.bea.sa/common/Header">
+  <import schemaLocation="BaseLib.xsd" namespace="http://www.sama.bea.sa/common/BaseLib"/>
+  <element name="MsgHdrRq" type="header:T_RqHdr"/>
+  <element name="MsgHdrRs" type="header:T_RsHdr"/>
+  <complexType name="T_RqHdr">
+    <sequence>
+      <element name="PID" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <length value="5"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Sys" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="GOV Portal"/>
+            <enumeration value="FI Portal"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="MsgDtTm" type="base:T_MsgDtTm" minOccurs="1" maxOccurs="1"></element>
+      <element name="ChID" type="base:T_ChID" minOccurs="0" maxOccurs="1"></element>
+      <element name="MsgUID" type="base:T_CRN" minOccurs="1" maxOccurs="1"></element>
+      <element name="OvrdMsgUID" type="base:T_CRN" minOccurs="0" maxOccurs="1"/>
+      <element name="SRN" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <minLength value="5"/>
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Cnfd" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="0"/>
+            <enumeration value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Mod" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="0"/>
+            <enumeration value="1"/>
+            <enumeration value="2"/>
+            <enumeration value="3"/>
+            <enumeration value="-1"/>
+            <enumeration value="-2"/>
+            <enumeration value="-3"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="CRN" type="base:T_CRN" minOccurs="0" maxOccurs="1"/>
+      <element name="Clsf" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="R1"/>
+            <enumeration value="R2"/>
+            <enumeration value="R3"/>
+            <enumeration value="R4"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="pHash" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <minLength value="0"/>
+            <maxLength value="128"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="IPAdrs" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <minLength value="0"/>
+            <pattern value="[0-9]{3}.[0-9]{3}.[0-9]{1,3}.[0-9]{1,3}"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Status" type="base:T_StatusCode" maxOccurs="1" minOccurs="0"/>
+      <element name="Note" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <minLength value="10"/>
+            <maxLength value="250"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Info" type="base:T_Attributes" maxOccurs="1" minOccurs="0"/>
+    </sequence>
+  </complexType>
+  <complexType name="T_RsHdr">
+    <sequence>
+      <element name="PID" minOccurs="1" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <length value="5"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Status" type="base:T_StatusCode" minOccurs="1" maxOccurs="1"></element>
+      <element name="MsgDtTm" type="base:T_MsgDtTm" minOccurs="1" maxOccurs="1"></element>
+      <element name="SRN" minOccurs="0" maxOccurs="1">
+        <simpleType>
+          <restriction base="string">
+            <minLength value="5"/>
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="CRN" type="base:T_CRN" minOccurs="1" maxOccurs="1"></element>
+      <element name="Info" type="base:T_Attributes" maxOccurs="1" minOccurs="0"/>
+    </sequence>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback</con:endpoint></con:endpoints><con:operation id="147b9adc-0f39-48d2-bb19-b2248c3750b1" isOneWay="false" action="" name="validateFICallback" bindingOperationName="validateFICallback" type="Request-Response" outputName="validateFICallbackResponse" inputName="validateFICallbackRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f29b4b9c-af9b-4370-86fa-886be04bc0c6" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.8.11:9080/BEA_Solution_Deny_ModuleWeb/sca/ValidateFIDenyCallback</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:val="http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback" xmlns:head="http://www.sama.bea.sa/common/Header" xmlns:bas="http://www.sama.bea.sa/common/BaseLib">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <val:validateFICallback>\r
+         <validateFICallbackRq>\r
+            <!--Optional:-->\r
+            <rqHdr>\r
+               <head:PID>gero</head:PID>\r
+               <!--Optional:-->\r
+               <head:Sys>GOV Portal</head:Sys>\r
+               <head:MsgDtTm>aeoliam venitaeolia</head:MsgDtTm>\r
+               <!--Optional:-->\r
+               <head:ChID>B2B</head:ChID>\r
+               <head:MsgUID>verrantque per auras</head:MsgUID>\r
+               <!--Optional:-->\r
+               <head:OvrdMsgUID>per auras</head:OvrdMsgUID>\r
+               <!--Optional:-->\r
+               <head:SRN>1800070000293</head:SRN>\r
+               <!--Optional:-->\r
+               <head:Cnfd>1</head:Cnfd>\r
+               <!--Optional:-->\r
+               <head:Mod>-2</head:Mod>\r
+               <!--Optional:-->\r
+               <head:CRN>foedere certo</head:CRN>\r
+               <!--Optional:-->\r
+               <head:Clsf>R4</head:Clsf>\r
+               <!--Optional:-->\r
+               <head:pHash>sceptra tenens</head:pHash>\r
+               <!--Optional:-->\r
+               <head:IPAdrs>turbine corripuit scopuloque</head:IPAdrs>\r
+               <!--Optional:-->\r
+               <head:Status>flammato</head:Status>\r
+               <!--Optional:-->\r
+               <head:Note>profundum quippe ferant</head:Note>\r
+               <!--Optional:-->\r
+               <head:Info>\r
+                  <!--1 or more repetitions:-->\r
+                  <bas:Attribute>\r
+                     <bas:Name>nubibus ignem disiecitque</bas:Name>\r
+                     <bas:Value>ac vinclis et</bas:Value>\r
+                  </bas:Attribute>\r
+               </head:Info>\r
+            </rqHdr>\r
+            <!--Optional:-->\r
+            <FICallbackRq xmlns:fid="http://www.sama.bea.sa/execution/FIDenyDlng">
+            <fid:CustInfo>
+            <bas:CustName xmlns:bas="http://www.sama.bea.sa/common/BaseLib">hhh</bas:CustName>
+            <bas:Id>2834404758</bas:Id>
+            <bas:IdType>RID</bas:IdType>
+            <!--Optional:-->
+            <bas:Ntnlty>MLI</bas:Ntnlty>
+         	  </fid:CustInfo>
+            <fid:ExeDtTm>2018-09-09T06:55:53</fid:ExeDtTm>
+            </FICallbackRq>\r
+         </validateFICallbackRq>\r
+      </val:validateFICallback>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://BEA-Solution_Library/ProcessLib/Common/ValidateFICallback/ValidateFICallback/validateFICallbackRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
